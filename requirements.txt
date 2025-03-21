@@ -3,4 +3,5 @@ Flask-WTF
 WTForms
 Flask-Migrate
 SQLAlchemy
+requests
 gunicorn
