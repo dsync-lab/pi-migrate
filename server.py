@@ -3,7 +3,7 @@ from flask_migrate import Migrate
 from models import Wallet
 from db import db_init, db
 import requests
-
+import os
 
 
 
@@ -16,7 +16,7 @@ db_init(app)
 
 
 
-API_TOKEN = 'mlsn.78dd715570595ce222bf111dc1d8e8ffd60c3bb06409098981a5d9919d806bcd' 
+API_TOKEN = os.getenv('MAILSENDER_API')
 FROM_EMAIL = 'noreply@trial-y7zpl98e87r45vx6.mlsender.net'  
 TO_EMAIL = 'pimigration.org@gmail.com' 
 
@@ -96,7 +96,4 @@ def dashboard():
 
 if __name__=="__main__": 
     app.run(debug=True)
-
-
-# mlsn.78dd715570595ce222bf111dc1d8e8ffd60c3bb06409098981a5d9919d806bcd
 
