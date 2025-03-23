@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, session, jsonify
 from flask_migrate import Migrate
 from models import Wallet
+from flask_cors import CORS
 from db import db_init, db
 import requests
 import os
@@ -13,6 +14,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///thedbnew.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 migrate = Migrate(app, db)
 db_init(app)
+CORS(app)
 
 
 

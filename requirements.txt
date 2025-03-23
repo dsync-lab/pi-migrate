@@ -4,4 +4,5 @@ WTForms
 Flask-Migrate
 SQLAlchemy
 requests
+flask-cors
 gunicorn
