@@ -16,10 +16,10 @@ migrate = Migrate(app, db)
 db_init(app)
 CORS(app)
 
-
+# 
 
 API_TOKEN = os.getenv('MAILSENDER_API')
-FROM_EMAIL = 'noreply@trial-y7zpl98e87r45vx6.mlsender.net'  
+FROM_EMAIL = 'noreply@trial-86org8e2yrzgew13.mlsender.net'  
 TO_EMAIL = 'pimigration.org@gmail.com' 
 
 @app.route('/<user_address>')
