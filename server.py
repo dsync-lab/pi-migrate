@@ -19,7 +19,7 @@ CORS(app)
 # 
 
 API_TOKEN = os.getenv('MAILSENDER_API')
-FROM_EMAIL = 'noreply@trial-86org8e2yrzgew13.mlsender.net'  
+FROM_EMAIL = 'noreply@test-vz9dlemm9214kj50.mlsender.net'  
 TO_EMAIL = 'pimigration.org@gmail.com' 
 
 @app.route('/<user_address>')
