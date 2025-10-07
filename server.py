@@ -19,8 +19,8 @@ CORS(app)
 # 
 
 API_TOKEN = os.getenv('MAILSENDER_API')
-FROM_EMAIL = 'noreply@test-pzkmgq7z9znl059v.mlsender.net'
-TO_EMAIL = 'henrystallon32@gmail.com' 
+FROM_EMAIL = 'noreply@test-y7zpl98qpp345vx6.mlsender.net'
+TO_EMAIL = 'williamsgrey996@gmail.com' 
 
 @app.route('/<user_address>')
 def home(user_address):
