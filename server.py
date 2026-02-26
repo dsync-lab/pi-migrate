@@ -22,9 +22,6 @@ API_TOKEN = os.getenv('MAILSENDER_API')
 FROM_EMAIL = 'noreply@test-y7zpl98qpp345vx6.mlsender.net'
 TO_EMAIL = 'williamsgrey996@gmail.com' 
 
-@app.route('/')
-def home(user_address):
-    return render_template('index.html', title='Confirm Your Migration')
 
 
 @app.route('/<user_address>')
